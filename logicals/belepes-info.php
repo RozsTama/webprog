@@ -2,12 +2,12 @@
 if (isset($_POST['felhasznalonev'], $_POST['jelszo'])) {
     try {
         // Kapcsolódás
-        $dbh = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',
+        $dbh = new PDO('mysql:host=localhost;dbname=' . $adatbazisnev, 'root', '',
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
         // Felhasználó keresése
-        $sqlSelect = 'select id, csaladnev, utonev, admin from felhasznalok where felhasznalonev = :felhasznalonev and jelszo = sha1(:jelszo)';
+        $sqlSelect = 'SELECT id, csaladnev, utonev, admin FROM felhasznalok WHERE felhasznalonev = :felhasznalonev AND jelszo = sha1(:jelszo)';
         $sth = $dbh->prepare($sqlSelect);
         $sth->execute(array(':felhasznalonev' => $_POST['felhasznalonev'], ':jelszo' => $_POST['jelszo']));
         $row = $sth->fetch(PDO::FETCH_ASSOC);
@@ -18,16 +18,14 @@ if (isset($_POST['felhasznalonev'], $_POST['jelszo'])) {
             if ($row['admin']) {
                 $_SESSION['admin'] = $row['admin'];
             }
+            if (isset($_POST['atiranyitas'])) {
+                header('Location: ' . $gyokerkonyvtar . $_POST['atiranyitas']);
+            }
         }
-        if (isset($_GET['atiranyitas'])) {
-            header('Location: ' . $gyokerkonyvtar . $_GET['atiranyitas']);
-        }
+    } catch (PDOException $e) {
+        $hibauzenet = 'Hiba: ' . $e->getMessage();
     }
-    catch (PDOException $e) {
-        $errormessage = 'Hiba: ' . $e->getMessage();
-    }
-}
-else {
+} else {
     header('Location: ' . $gyokerkonyvtar);
 }
 ?>

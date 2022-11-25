@@ -22,7 +22,7 @@ function ellenoriz() {
 
     var email = document.getElementById("email");
     if (email) {
-        var checkPattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; //online segítség: https://regex101.com/
+        var checkPattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
         if (!checkPattern.test(email.value)) {
             rendben = false;
             email.style.background = "#f99";

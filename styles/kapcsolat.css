@@ -1,31 +1,12 @@
-/*
-div {
-    width: 500px;
+.form-elem {
+    width: 50%;
+    display: table;
 }
 
 label {
-    line-height: 30px;
-
+    float: left;
 }
 
-label input, label textarea {
-position: relative;
-left: 200px;
-    float: right;
-    border: 2px red solid;
-    padding: 2px;
-}
-
-textarea {
-    width: 350px;
-}
-
-input[type="submit"] {
-    float: right;
-    clear: both;
-}
-
-button {
+.mezo, .gomb {
     float: right;
 }
-*/

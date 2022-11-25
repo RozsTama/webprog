@@ -1,12 +1,5 @@
 <?php
-include('./includes/config.inc.php');
-
-$oldal = strtok(substr($_SERVER['REQUEST_URI'], strlen($gyokerkonyvtar)), '?');
-
-echo $_SERVER['REQUEST_URI'] . '   ' . $oldal;
-
 session_start();
-
 $most = time();
 if (isset($_SESSION['lejarat_idopontja']) && $most > $_SESSION['lejarat_idopontja']) {
     session_unset();
@@ -17,27 +10,28 @@ if (isset($_SESSION['lejarat_idopontja']) && $most > $_SESSION['lejarat_idopontj
     session_destroy();
     session_start();
 }
-
 $_SESSION['lejarat_idopontja'] = $most + 1200;
 
-if (empty($oldal)) {
-    $keres = $oldalak['/'];
+include('./includes/config.inc.php');
+
+$oldal = strtok(substr($_SERVER['REQUEST_URI'], strlen($gyokerkonyvtar)), '?');
+echo $_SERVER['REQUEST_URI'] . '   ' . $oldal;
+
+if ($oldal == '') {
+    $oldal = 'cimlap';
 }
-else {
-    if ($oldal != '/' && isset($oldalak[$oldal]) && file_exists('./templates/pages/' . $oldalak[$oldal]['fajl'] . '.tpl.php') &&
-        ($oldalak[$oldal]['jog'] < 2 || isset($_SESSION['admin']))) {
-        if ($oldalak[$oldal]['jog'] == 1 && !isset($_SESSION['felhasznalonev'])) {
-            $keres = $oldalak['bejelentkezes'];
-            $atiranyitas = $oldal;
-        }
-        else {
-            $keres = $oldalak[$oldal];
-        }
+if (isset($oldalak[$oldal]) && file_exists('./templates/pages/' . $oldalak[$oldal]['fajl'] . '.tpl.php')) {
+    if ($oldalak[$oldal]['jog'] > 0 && !isset($_SESSION['felhasznalonev'])) {
+        $keres = $oldalak['belepes'];
+        $atiranyitas = $oldal;
+    } else if ($oldalak[$oldal]['jog'] > 1 && !isset($_SESSION['admin'])) {
+        $keres = $nem_keresheto['jogosultsag-szukseges'];
+    } else {
+        $keres = $oldalak[$oldal];
     }
-    else {
-        $keres = $hiba_oldal;
-        http_response_code(404);
-    }
+} else {
+    $keres = $nem_keresheto['404'];
+    http_response_code(404);
 }
 
 include('./templates/index.tpl.php');

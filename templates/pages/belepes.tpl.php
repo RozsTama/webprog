@@ -1,12 +1,14 @@
 <?php   if (isset($atiranyitas)) { ?>
-A kért oldal megtekintéséhez be kell jelentkezned.
+<blockquote>A kért oldal megtekintéséhez be kell jelentkeznie.</blockquote>
 <?php   } ?>
 <div class="oszlopok">
-    <form action="<?= $gyokerkonyvtar ?>bejelentkezes_info<?= isset($atiranyitas) ? '?atiranyitas=' . $atiranyitas : '' ?>" method="post">
-        <h2>Bejelentkezés</h2>
+    <form action="<?= $gyokerkonyvtar ?>belepes-info" method="post">
+        <h2>Belépés</h2>
         <div class="form-elem"><label>Felhasználónév</label><input class="mezo" type="text" name="felhasznalonev" required></div>
         <div class="form-elem"><label>Jelszó</label><input class="mezo" type="password" name="jelszo" required></div>
-        <input class="gomb" type="submit" name="bejelentkezes" value="Bejelentkezés">
+<?php if (isset($atiranyitas)) { ?>        <input type="hidden" name="atiranyitas" value="<?= $atiranyitas ?>"><?php } ?>
+
+        <input class="gomb" type="submit" name="belepes" value="Belépés">
     </form>
     <form action="<?= $gyokerkonyvtar ?>regisztracio" method="post">
         <h2>Regisztráció</h2>

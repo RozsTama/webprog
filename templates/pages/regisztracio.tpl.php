@@ -1,6 +1,6 @@
 <?php   if (isset($uzenet)) { ?>
-            <h1><?= $uzenet ?></h1>
+            <h2><?= $uzenet ?></h2>
 <?php       if ($ujra) { ?>
-            <a href="bejelentkezes">Próbálja újra!</a>
+            <a href="<?= $gyokerkonyvtar ?>belepes">Próbálja újra!</a>
 <?php       } ?>
 <?php   } ?>

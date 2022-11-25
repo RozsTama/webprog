@@ -7,8 +7,7 @@ if (isset($_SESSION['felhasznalonev'])) {
         setcookie(session_name(), '', time() - 43200, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
     }
     session_destroy();
-}
-else {
+} else {
     header('Location: ' . $gyokerkonyvtar);
 }
 ?>
