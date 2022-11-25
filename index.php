@@ -15,7 +15,6 @@ $_SESSION['lejarat_idopontja'] = $most + 1200;
 include('./includes/config.inc.php');
 
 $oldal = strtok(substr($_SERVER['REQUEST_URI'], strlen($gyokerkonyvtar)), '?');
-echo $_SERVER['REQUEST_URI'] . '   ' . $oldal;
 
 if ($oldal == '') {
     $oldal = 'cimlap';
