@@ -5,7 +5,7 @@
             Név: <strong><?= $row['csaladnev'] . ' ' . $row['utonev'] ?></strong>
 <?php       } else { ?>
             <h1>A bejelentkezés nem sikerült!</h1>
-            <a href="bejelentkezes">Próbálja újra!</a>
+            <a href="<?= $gyokerkonyvtar ?>bejelentkezes">Próbálja újra!</a>
 <?php       } ?>
 <?php   } ?>
 <?php   if (isset($errormessage)) { ?>

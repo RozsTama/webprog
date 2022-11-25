@@ -8,10 +8,6 @@ body {
     flex-direction: column;
 }
 
-h1, h2, h3, h4 {
-    font-weight: bold;
-}
-
 .shaper {
     max-width: 70em;
     margin: 0 auto;
@@ -19,7 +15,7 @@ h1, h2, h3, h4 {
 
 nav {
     background: #8c2532;
-    background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0.1));
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
     text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
     box-shadow: 0 0 0 1px rgb(0 0 0 / 20%) inset, 0 0 8px rgb(0 0 0 / 50%);
 }
@@ -52,6 +48,10 @@ nav li.active, nav li a:hover {
 
 main {
     margin: 2em 0 auto 0;
+}
+
+main > div.shaper > *:first-child {
+    margin-top: 0;
 }
 
 footer {

@@ -12,12 +12,15 @@ if (isset($_POST['felhasznalonev'], $_POST['jelszo'])) {
         $sth->execute(array(':felhasznalonev' => $_POST['felhasznalonev'], ':jelszo' => $_POST['jelszo']));
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         if ($row) {
+            $_SESSION['felhasznalonev'] = $_POST['felhasznalonev'];
             $_SESSION['csaladnev'] = $row['csaladnev'];
             $_SESSION['utonev'] = $row['utonev'];
-            $_SESSION['felhasznalonev'] = $_POST['felhasznalonev'];
             if ($row['admin']) {
                 $_SESSION['admin'] = $row['admin'];
             }
+        }
+        if (isset($_GET['atiranyitas'])) {
+            header('Location: ' . $gyokerkonyvtar . $_GET['atiranyitas']);
         }
     }
     catch (PDOException $e) {
@@ -25,6 +28,6 @@ if (isset($_POST['felhasznalonev'], $_POST['jelszo'])) {
     }
 }
 else {
-    header('Location: .');
+    header('Location: ' . $gyokerkonyvtar);
 }
 ?>

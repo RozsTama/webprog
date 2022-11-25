@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['felhasznalonev'], $_POST['jelszo'], $_POST['csaladnev'], $_POST['utonev'])) {
+if (isset($_POST['csaladnev'], $_POST['utonev'], $_POST['felhasznalonev'], $_POST['jelszo'])) {
     try {
         // Kapcsolódás
         $dbh = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',
@@ -38,6 +38,6 @@ if (isset($_POST['felhasznalonev'], $_POST['jelszo'], $_POST['csaladnev'], $_POS
     }
 }
 else {
-    header('Location: .');
+    header('Location: ' . $gyokerkonyvtar);
 }
 ?>
