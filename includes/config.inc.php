@@ -6,24 +6,26 @@ $ablakcim = array(
 $fejlec = array(
     'kepforras' => 'logo.png',
     'kepalt' => 'logo',
-    'cim' => 'Mini honlap'
+    'cim' => 'Mini honlap',
+    'motto' => ''
 );
 
 $lablec = array(
-    'copyright' => 'Copyright ' . date('Y') . '.',
+    'copyright' => 'Copyright ' . date("Y") . '.',
     'ceg' => 'Mini honlap Kft.'
 );
 
 $oldalak = array(
-    '/' => array('fajl' => 'cimlap', 'szoveg' => 'Címlap', 'menun' => array(1,1)),
-    'bemutatkozas' => array('fajl' => 'bemutatkozas', 'szoveg' => 'Bemutatkozás', 'menun' => array(1,1)),
-    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
-    'cikkek' => array('fajl' => 'cikkek', 'szoveg' => 'Cikkek', 'menun' => array(1,1)),
-    'tablazat' => array('fajl' => 'tablazat', 'szoveg' => 'Táblázat', 'menun' => array(1,1)),
-    'bejelentkezes' => array('fajl' => 'bejelentkezes', 'szoveg' => 'Bejelentkezés', 'menun' => array(1,0)),
-    'kijelentkezes' => array('fajl' => 'kijelentkezes', 'szoveg' => 'Kijelentkezés', 'menun' => array(0,1)),
-    'bejelentkezes_info' => array('fajl' => 'bejelentkezes_info', 'szoveg' => '', 'menun' => array(0,0)),
-    'regisztracio' => array('fajl' => 'regisztracio', 'szoveg' => '', 'menun' => array(0,0))
+    '/' => array('fajl' => 'cimlap', 'szoveg' => 'Címlap', 'menun' => array(1, 1, 1), 'jog' => 0),
+    'bemutatkozas' => array('fajl' => 'bemutatkozas', 'szoveg' => 'Bemutatkozás', 'menun' => array(1, 1, 1), 'jog' => 0),
+    'kepgaleria' => array('fajl' => 'kepgaleria', 'szoveg' => 'Képgaléria', 'menun' => array(1, 1, 1), 'jog' => 0),
+    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1, 1, 1), 'jog' => 1),
+    'email' => array('fajl' => 'email', 'szoveg' => 'email', 'menun' => array(0, 0, 0), 'jog' => 1),
+    'tablazat' => array('fajl' => 'tablazat', 'szoveg' => 'Táblázat', 'menun' => array(0, 0, 1), 'jog' => 2),
+    'bejelentkezes' => array('fajl' => 'bejelentkezes', 'szoveg' => 'Bejelentkezés', 'menun' => array(1, 0, 0), 'jog' => 0),
+    'kijelentkezes' => array('fajl' => 'kijelentkezes', 'szoveg' => 'Kijelentkezés', 'menun' => array(0, 1, 1), 'jog' => 1),
+    'bejelentkezes_info' => array('fajl' => 'bejelentkezes_info', 'szoveg' => 'Bejelentkezés', 'menun' => array(0, 0, 0), 'jog' => 0),
+    'regisztracio' => array('fajl' => 'regisztracio', 'szoveg' => 'Regisztráció', 'menun' => array(0, 0, 0), 'jog' => 0)
 );
 
 $hiba_oldal = array('fajl' => '404', 'szoveg' => 'A keresett oldal nem található!');

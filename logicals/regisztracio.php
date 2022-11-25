@@ -23,7 +23,7 @@ if (isset($_POST['felhasznalonev'], $_POST['jelszo'], $_POST['csaladnev'], $_POS
                                  ':felhasznalonev' => $_POST['felhasznalonev'], ':jelszo' => sha1($_POST['jelszo'])));
             if ($count = $stmt->rowCount()) {
                 $newid = $dbh->lastInsertId();
-                $uzenet = 'A regisztrációja sikeres.<br>Azonosítója:' . $newid;
+                $uzenet = 'A regisztrációja sikeres.<br>Azonosítója: ' . $newid;
                 $ujra = false;
             }
             else {

@@ -1,7 +1,15 @@
 body {
-    font-family: sans-serif;
+    font-family: 'open sans', sans-serif;
     line-height: 1.4;
+    word-spacing: 0.125em;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
 }
 
 .shaper {
@@ -9,43 +17,43 @@ body {
     margin: 0 auto;
 }
 
-#menu {
-    width: 100%;
-    background: #0074D9;
-    font-size: 1em;
+nav {
+    background: #8c2532;
+    background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0.1));
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 20%) inset, 0 0 8px rgb(0 0 0 / 50%);
 }
 
-#menu ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-#menu li {
+nav li {
     float: left;
 }
 
-#menu li:last-child {
+nav li:last-child {
     float: right;
 }
 
-#menu li.active {
-    background-color: #111;
-}
-
-#menu li a {
+nav li a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 1em;
+    padding: 0.8em;
     text-decoration: none;
 }
 
-#menu li a:hover {
-    background-color: #111;
+nav li.active, nav li a:hover {
+    background: #80222e;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset
+}
+
+main {
+    margin: 2em 0 auto 0;
 }
 
 footer {
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
 }

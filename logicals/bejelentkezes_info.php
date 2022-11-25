@@ -7,12 +7,17 @@ if (isset($_POST['felhasznalonev'], $_POST['jelszo'])) {
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
         // Felhasználó keresése
-        $sqlSelect = 'select id, csaladnev, utonev from felhasznalok where felhasznalonev = :felhasznalonev and jelszo = sha1(:jelszo)';
+        $sqlSelect = 'select id, csaladnev, utonev, admin from felhasznalok where felhasznalonev = :felhasznalonev and jelszo = sha1(:jelszo)';
         $sth = $dbh->prepare($sqlSelect);
         $sth->execute(array(':felhasznalonev' => $_POST['felhasznalonev'], ':jelszo' => $_POST['jelszo']));
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         if ($row) {
-            $_SESSION['csaladnev'] = $row['csaladnev']; $_SESSION['utonev'] = $row['utonev']; $_SESSION['felhasznalonev'] = $_POST['felhasznalonev'];
+            $_SESSION['csaladnev'] = $row['csaladnev'];
+            $_SESSION['utonev'] = $row['utonev'];
+            $_SESSION['felhasznalonev'] = $_POST['felhasznalonev'];
+            if ($row['admin']) {
+                $_SESSION['admin'] = $row['admin'];
+            }
         }
     }
     catch (PDOException $e) {

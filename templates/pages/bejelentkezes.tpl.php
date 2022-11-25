@@ -1,23 +1,16 @@
-<form action="?oldal=bejelentkezes_info" method="post">
-    <fieldset>
-        <legend>Bejelentkezés</legend>
-        <br>
-        <input type="text" name="felhasznalonev" placeholder="Felhasználónév" required><br><br>
-        <input type="password" name="jelszo" placeholder="Jelszó" required><br><br>
-        <input type="submit" name="bejelentkezes" value="Bejelentkezés">
-        <br>&nbsp;
-    </fieldset>
-</form>
-<h3>Regisztrálja magát, ha még nem felhasználó!</h3>
-<form action="?oldal=regisztracio" method="post">
-    <fieldset>
-        <legend>Regisztráció</legend>
-        <br>
-        <input type="text" name="csaladnev" placeholder="Családnév" required><br><br>
-        <input type="text" name="utonev" placeholder="Utónév" required><br><br>
-        <input type="text" name="felhasznalonev" placeholder="Felhasználónév" required><br><br>
-        <input type="password" name="jelszo" placeholder="Jelszó" required><br><br>
-        <input type="submit" name="regisztracio" value="Regisztráció">
-        <br>&nbsp;
-    </fieldset>
-</form>
+<div class="oszlopok">
+    <form action="bejelentkezes_info" method="post">
+        <h2>Bejelentkezés</h2>
+        <div class="form-elem"><label>Felhasználónév</label><input class="mezo" type="text" name="felhasznalonev" required></div>
+        <div class="form-elem"><label>Jelszó</label><input class="mezo" type="password" name="jelszo" required></div>
+        <input class="gomb" type="submit" name="bejelentkezes" value="Bejelentkezés">
+    </form>
+    <form action="regisztracio" method="post">
+        <h2>Regisztráció</h2>
+        <div class="form-elem"><label>Családnév</label><input class="mezo" type="text" name="csaladnev" required></div>
+        <div class="form-elem"><label>Utónév</label><input class="mezo" type="text" name="utonev" required></div>
+        <div class="form-elem"><label>Felhasználónév</label><input class="mezo" type="text" name="felhasznalonev" required></div>
+        <div class="form-elem"><label>Jelszó</label><input class="mezo" type="password" name="jelszo" required></div>
+        <input class="gomb" type="submit" name="regisztracio" value="Regisztráció">
+    </form>
+</div>

@@ -1,0 +1,71 @@
+div.oszlopok {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+form {
+    flex: 1 1 0;
+    max-width: 25em;
+    padding: 0.8em;
+    background: #f0e8d9;
+    border: 1px solid #d1c2a6;
+}
+
+form h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+div.form-elem {
+    width: 100%;
+    display: table;
+    margin: 0.4em 0;
+}
+
+label {
+    width: 35%;
+    float: left;
+    text-align: right;
+    margin: 3px;
+}
+
+input {
+    float: right;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input.mezo {
+    width: 60%;
+    background: #f6f1e8;
+    border: 1px solid #d6cdbb;
+    padding: 2px;
+}
+
+input.mezo:focus, input.mezo:active {
+    border: 1px solid #04a;
+    outline: none;
+}
+
+input.gomb {
+    width: auto;
+    margin-top: 1em;
+    cursor: pointer;
+    padding: 0.2em 0.3em;
+    background-color: #e8e8e8;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 0 #fff inset;
+}
+
+input.gomb:active {
+    background-color: #d8d8d8;
+    box-shadow: -1px -1px 0 #fff inset;
+}
+
+input.gomb:focus, input.gomb:active {
+    border: 1px solid #04a;
+    outline: none;
+}
