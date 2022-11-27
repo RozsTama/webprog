@@ -1,0 +1,12 @@
+.form-elem {
+    width: 50%;
+    display: table;
+}
+
+label {
+    float: left;
+}
+
+.mezo, .gomb {
+    float: right;
+}
