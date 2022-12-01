@@ -1,0 +1,11 @@
+h2, .link, .kep {
+    display: inline-block;
+}
+
+.link {
+    margin-left: 1em;
+}
+
+.kep img {
+    width: 200px;
+}

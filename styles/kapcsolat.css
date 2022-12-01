@@ -1,0 +1,23 @@
+form {
+    display: inline-block;
+}
+
+.form-elem {
+    width: 100%;
+    display: table;
+    margin-bottom: 1em;
+}
+
+label {
+    width: 15em;
+    margin: 3px;
+}
+
+label, .mezo {
+    float: left;
+}
+
+.gomb {
+    float: right;
+    margin-left: 0.5em;
+}
