@@ -9,7 +9,7 @@ if (isset($_POST['kuld'])) {
         } else if ($fajl['error'] == 1 || $fajl['error'] == 2 || $fajl['size'] > $galeria['maxmeret']) {
             $uzenet[] = 'Túl nagy állomány: ' . $fajl['name'];
         } else {
-            $vegsohely = $galeria['konyvtar'] . strtolower($fajl['name']);
+            $vegsohely = './' . $galeria['konyvtar'] . strtolower($fajl['name']);
             if (file_exists($vegsohely)) {
                 $uzenet[] = 'Már létezik: ' . $fajl['name'];
             }

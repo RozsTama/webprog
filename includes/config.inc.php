@@ -31,7 +31,7 @@ $nem_keresheto = array(
 );
 
 $galeria = array(
-    'konyvtar' => $gyokerkonyvtar . 'images/galeria/',
+    'konyvtar' => 'images/galeria/',
     'fajltipusok' => array('jpg', 'png'),
     'mediatipusok' => array('image/jpeg', 'image/png'),
     'datumforma' => 'Y.m.d. H:i',

@@ -3,8 +3,8 @@
 arsort($kepek);
 foreach ($kepek as $fajl => $datum) { ?>
     <div class="kep">
-        <a href="<?= $galeria['konyvtar'] . $fajl ?>">
-            <img src="<?= $galeria['konyvtar'] . $fajl ?>">
+        <a href="<?= $gyokerkonyvtar . $galeria['konyvtar'] . $fajl ?>">
+            <img src="<?= $gyokerkonyvtar . $galeria['konyvtar'] . $fajl ?>">
         </a>
     </div>
 <?php } ?>
