@@ -8,8 +8,8 @@ A madárkórház működési költségeinek fedezésére az állam rendszeres t�
 <p>A Madármentő Kiállítás Hortobágy egyik érdekes turisztikai látványossága. Létrehozásával a madárkórház tevékenységét megismerni akaró, állatbarát és természetkedvelő érdeklődők, óvodai-iskolai csoportok, szakemberek igényeit igyekszünk kielégíteni.<br>
 Újszerű ötletekkel, egyedi, diorámás preparátumokkal, poszterekkel, fotókkal, eredeti röntgenképekkel, laborleletekkel, újságcikkekkel, sok videó anyaggal, és ipari kamerákon keresztül élő közvetítéssel, megfelelő szakvezetés mellett, a látogató nemcsak a madárkórház tevékenységébe tekinthet be, hanem megismerkedhet azokkal a lehetőségekkel, melyekkel a természetben járva sérült, beteg madarakon segíthet, felismerheti az egyes életközösségeket fenyegető veszélyforrásokat és a megelőzés lehetőségeit.</p>
 <p>&nbsp;</p>
-<p align="justify"><strong>Madárkórház Alapítvány</strong></p>
-<p align="justify"><strong>Cím:</strong> 4071 Hortobágy, Petőfi tér 6.<br>
+<p><strong>Madárkórház Alapítvány</strong></p>
+<p><strong>Cím:</strong> 4071 Hortobágy, Petőfi tér 6.<br>
 <strong>Tel/Fax:</strong> 0652/369-181<br>
 <strong>Mobil:</strong> Dr. Déri János: 0630/9-435-494<br>
 <strong>E-mail:</strong> <a href="madarkorhaz@gmail.com" target="_blank">madarkorhaz@gmail.com</a><br>

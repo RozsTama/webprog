@@ -1,0 +1,12 @@
+form {
+    display: inline-block;
+}
+
+.form-elem {
+    margin-bottom: 1em;
+}
+
+label {
+    float: left;
+    width: 6em;
+}

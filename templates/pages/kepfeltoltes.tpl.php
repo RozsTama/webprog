@@ -1,6 +1,6 @@
 <h2>Feltöltés a galériába:</h2>
 <?php
-if (!empty($uzenet))
+if ($uzenet)
 {
     echo '<ul>';
     foreach ($uzenet as $u) {
@@ -10,14 +10,16 @@ if (!empty($uzenet))
 }
 ?>
 <form action="<?= $gyokerkonyvtar ?>kepfeltoltes" method="post" enctype="multipart/form-data">
-    <label>Első:
-        <input type="file" name="elso" required><br>
-    </label>
-    <label>Második:
-        <input type="file" name="masodik"><br>
-    </label>
-    <label>Harmadik:
-        <input type="file" name="harmadik"><br>
-    </label>
-    <input class="gomb" type="submit" name="kuld">
+    <div class="form-elem"><label>Első:</label>
+        <input type="file" name="elso" required>
+    </div>
+    <div class="form-elem"><label>Második:</label>
+        <input type="file" name="masodik">
+    </div>
+    <div class="form-elem"><label>Harmadik:</label>
+        <input type="file" name="harmadik">
+    </div>
+    <div class="form-elem">
+        <input class="gomb" type="submit" name="kuld">
+    </div>
 </form>

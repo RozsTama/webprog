@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $ablakcim . ' – ' . (isset($oldalak[$oldal]) ?  $oldalak[$oldal]['szoveg'] : $keres['szoveg']) ?></title>
+    <title><?= $ablakcim . ' – ' . (isset($oldalak[$oldal]) ? $oldalak[$oldal]['szoveg'] : $keres['szoveg']) ?></title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700|PT+Serif:400,700|McLaren|Roboto+Mono:400,700&amp;subset=latin,latin-ext">
     <link rel="stylesheet" type="text/css" href="<?= $gyokerkonyvtar ?>styles/stilus.css">
 <?php if (file_exists('./styles/' . $keres['fajl'] . '.css')) { ?>    <link rel="stylesheet" type="text/css" href="<?= $gyokerkonyvtar ?>styles/<?= $keres['fajl']?>.css"><?php } ?>
