@@ -2,11 +2,11 @@
 <?php
 if ($uzenet)
 {
-    echo '<ul>';
+    echo "<ul>\n";
     foreach ($uzenet as $u) {
-        echo '<li>' . $u . '</li>';
+        echo "    <li>" . $u . "</li>\n";
     }
-    echo '</ul>';
+    echo "</ul>\n";
 }
 ?>
 <form action="<?= $gyokerkonyvtar ?>kepfeltoltes" method="post" enctype="multipart/form-data">
