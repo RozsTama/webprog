@@ -1,7 +1,7 @@
 <table>
 <?php
 try {
-    $dbh = new PDO('mysql:host=localhost;dbname=' . $adatbazisnev, 'root', '',
+    $dbh = new PDO('mysql:host=localhost;dbname=' . $adatbazis['nev'], $adatbazis['felhasznalonev'], $adatbazis['jelszo'],
                     array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
     $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 

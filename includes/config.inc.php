@@ -1,7 +1,11 @@
 <?php
 $gyokerkonyvtar = '/madarpark/';
 
-$adatbazisnev = 'madarpark';
+$adatbazis = array(
+    'nev' => 'madarpark',
+    'felhasznalonev' => 'root',
+    'jelszo' => ''
+);
 
 $ablakcim = 'Hortobágyi Madárpark';
 
