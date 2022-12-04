@@ -2,6 +2,7 @@
 $gyokerkonyvtar = '/madarpark/';
 
 $adatbazis = array(
+    'szerver' => 'localhost',
     'nev' => 'madarpark',
     'felhasznalonev' => 'root',
     'jelszo' => ''

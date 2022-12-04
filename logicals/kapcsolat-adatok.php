@@ -1,20 +1,20 @@
 <?php
 if (isset($_POST['nev'], $_POST['email'], $_POST['szoveg'])) {
-    $hibauzenet = '';
+    $hibauzenetek = array();
     if (strlen($_POST['nev']) < 5) {
-        $hibauzenet .= 'Hibás név: ' . $_POST['nev'] . '<br>';
+        $hibauzenetek[] = 'Hibás név: ' . $_POST['nev'];
     }
     $re = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
     if (!preg_match($re, $_POST['email'])) {
-        $hibauzenet .= 'Hibás email: ' . $_POST['email'] . '<br>';
+        $hibauzenetek[] = 'Hibás e-mail: ' . $_POST['email'];
     }
     if ($_POST['szoveg'] == '') {
-        $hibauzenet .= 'Hibás szöveg: ' . $_POST['szoveg'] . '<br>';
+        $hibauzenetek[] = 'Hibás szöveg: ' . $_POST['szoveg'];
     }
 
-    if ($hibauzenet == '') {
+    if (!$hibauzenetek) {
         try {
-            $dbh = new PDO('mysql:host=localhost;dbname=' . $adatbazis['nev'], $adatbazis['felhasznalonev'], $adatbazis['jelszo'],
+            $dbh = new PDO('mysql:host=' . $adatbazis['szerver'] . ';dbname=' . $adatbazis['nev'], $adatbazis['felhasznalonev'], $adatbazis['jelszo'],
                             array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
             $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
