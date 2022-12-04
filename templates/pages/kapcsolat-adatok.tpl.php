@@ -1,10 +1,12 @@
 <?php
-if ($hibauzenet == '') {
-    echo $uzenet . '<br>Kapott értékek:';
-    echo '<pre>';
+if (!$hibauzenetek) {
+    echo $uzenet . "<br>\nKapott értékek:\n";
+    echo "<pre>\n";
     echo var_dump($_POST);
-    echo '</pre>';
+    echo "</pre>\n";
 } else {
-    echo $hibauzenet;
+    foreach ($hibauzenetek as $u) {
+        echo $u . "<br>\n";
+    }
 }
 ?>

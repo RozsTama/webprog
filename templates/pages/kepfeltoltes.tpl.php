@@ -1,9 +1,9 @@
 <h2>Feltöltés a galériába:</h2>
 <?php
-if ($uzenet)
+if ($uzenetek)
 {
     echo "<ul>\n";
-    foreach ($uzenet as $u) {
+    foreach ($uzenetek as $u) {
         echo "    <li>" . $u . "</li>\n";
     }
     echo "</ul>\n";
